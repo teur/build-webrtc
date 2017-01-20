@@ -17,7 +17,9 @@ var GYP_DEFINES = [
   'include_examples=0',
   'include_tests=1',  // Needed for FakeAudioCaptureModule
   'fastbuild=1',
-  'remove_webcore_debug_symbols=1'
+  'remove_webcore_debug_symbols=1',
+  'include_pulse_audio=0',
+  'include_internal_video_render=0'
 ];
 
 switch (PLATFORM) {
