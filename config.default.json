@@ -13,5 +13,6 @@
   "s3": {
     "bucket": "webrtc-libraries-and-headers",
     "remote_path": "v1/build"
-  }
+  },
+  "arch": "arm"
 }

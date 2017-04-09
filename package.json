@@ -16,7 +16,7 @@
     "clean": "jake clean",
     "copy-webrtc": "jake copy-webrtc",
     "copy-webrtc-headers": "jake copy-webrtc-headers",
-    "install": "jake",
+    "install": "jake checkout-webrtc",
     "lint": "eslint jakelib jakelib/*.jake Jakefile",
     "package-webrtc": "jake package-webrtc",
     "publish-webrtc": "jake publish-webrtc",

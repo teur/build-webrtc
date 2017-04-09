@@ -22,13 +22,21 @@ var GYP_DEFINES = [
   'include_internal_video_render=0'
 ];
 
+switch (ARCH) {
+  case 'arm':
+    GYP_DEFINES.push('arm_version=7');
+    GYP_DEFINES.push('arm_neon=1');
+    GYP_DEFINES.push('arm_float_abi=hard');
+   break;
+}
+
 switch (PLATFORM) {
   case 'darwin':
     GYP_DEFINES.push('clang=1');
     break;
 
   case 'linux':
-    GYP_DEFINES.push('clang=1');
+    GYP_DEFINES.push('clang=0');
     if (!process.env.JAVA_HOME) {
       process.env.JAVA_HOME = fs.existsSync('/usr/lib/jvm/java')
         ? '/usr/lib/jvm/java'
